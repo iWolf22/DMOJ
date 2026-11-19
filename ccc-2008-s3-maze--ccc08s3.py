@@ -1,7 +1,7 @@
 # Problem: CCC '08 S3 - Maze (ccc08s3)
 # Problem URL: https://dmoj.ca/problem/ccc08s3
 # Submission: 3998344 (https://dmoj.ca/submission/3998344)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-11-01T00:30:48+00:00
 
 #CCC '08 S3 - Maze
