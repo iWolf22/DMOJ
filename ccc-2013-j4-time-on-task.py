@@ -1,7 +1,7 @@
 # Problem: CCC '13 J4 - Time on task (ccc13j4)
 # Problem URL: https://dmoj.ca/problem/ccc13j4
 # Submission: 3223191 (https://dmoj.ca/submission/3223191)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2020-12-20T00:45:37+00:00
 
 #CCC '13 J4 - Time on task
