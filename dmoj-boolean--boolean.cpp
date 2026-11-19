@@ -1,7 +1,7 @@
 // Problem: Boolean (boolean)
 // Problem URL: https://dmoj.ca/problem/boolean
 // Submission: 3697730 (https://dmoj.ca/submission/3697730)
-// Language: C++20
+// Language: C++20 (CPP20)
 // Submitted: 2021-06-26T16:57:02+00:00
 
 // Your First C++ Program
