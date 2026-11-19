@@ -1,7 +1,7 @@
 # Problem: CCC '04 S3 - Spreadsheet (ccc04s3)
 # Problem URL: https://dmoj.ca/problem/ccc04s3
 # Submission: 4794088 (https://dmoj.ca/submission/4794088)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2022-08-24T01:45:39+00:00
 
 # CCC '04 S3 - Spreadsheet
