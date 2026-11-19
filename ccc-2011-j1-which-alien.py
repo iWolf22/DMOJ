@@ -1,7 +1,7 @@
 # Problem: CCC '11 J1 - Which Alien? (ccc11j1)
 # Problem URL: https://dmoj.ca/problem/ccc11j1
 # Submission: 3339609 (https://dmoj.ca/submission/3339609)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-01-30T18:26:59+00:00
 
 #CCC '11 J1 - Which Alien?
