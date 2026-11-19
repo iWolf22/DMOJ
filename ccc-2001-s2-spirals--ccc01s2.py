@@ -1,7 +1,7 @@
 # Problem: CCC '01 S2 - Spirals (ccc01s2)
 # Problem URL: https://dmoj.ca/problem/ccc01s2
 # Submission: 3574926 (https://dmoj.ca/submission/3574926)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-04-21T03:16:21+00:00
 
 # CCC '01 S2 - Spirals
