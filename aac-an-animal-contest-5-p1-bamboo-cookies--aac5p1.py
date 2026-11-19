@@ -1,7 +1,7 @@
 # Problem: An Animal Contest 5 P1 - Bamboo Cookies (aac5p1)
 # Problem URL: https://dmoj.ca/problem/aac5p1
 # Submission: 4300671 (https://dmoj.ca/submission/4300671)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2022-02-06T22:20:36+00:00
 
 # An Animal Contest 5 P1 - Bamboo Cookies
