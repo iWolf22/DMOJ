@@ -1,7 +1,7 @@
 // Problem: CCC '03 S3 - Floor Plan (ccc03s3)
 // Problem URL: https://dmoj.ca/problem/ccc03s3
 // Submission: 5301405 (https://dmoj.ca/submission/5301405)
-// Language: C++20
+// Language: C++20 (CPP20)
 // Submitted: 2023-02-08T19:56:55+00:00
 
 #include <iostream>
