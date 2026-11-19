@@ -1,7 +1,7 @@
 // Problem: CCC '10 J5 - Knight Hop (ccc10j5)
 // Problem URL: https://dmoj.ca/problem/ccc10j5
 // Submission: 4876878 (https://dmoj.ca/submission/4876878)
-// Language: C++14
+// Language: C++14 (CPP14)
 // Submitted: 2022-09-26T14:11:06+00:00
 
 #include <iostream>
