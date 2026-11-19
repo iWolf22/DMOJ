@@ -1,7 +1,7 @@
 # Problem: CCC '02 S1 - The Students' Council Breakfast (ccc02s1)
 # Problem URL: https://dmoj.ca/problem/ccc02s1
 # Submission: 4568564 (https://dmoj.ca/submission/4568564)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2022-05-19T01:12:08+00:00
 
 # CCC '02 S1 - The Students' Council Breakfast
