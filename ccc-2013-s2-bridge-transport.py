@@ -1,7 +1,7 @@
 # Problem: CCC '13 S2 - Bridge Transport (ccc13s2)
 # Problem URL: https://dmoj.ca/problem/ccc13s2
 # Submission: 4252258 (https://dmoj.ca/submission/4252258)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2022-01-26T20:51:58+00:00
 
 # CCC '13 S2 - Bridge Transport
