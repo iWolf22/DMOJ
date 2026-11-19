@@ -1,7 +1,7 @@
 # Problem: CCC '11 J2 - Who Has Seen The Wind (ccc11j2)
 # Problem URL: https://dmoj.ca/problem/ccc11j2
 # Submission: 3339671 (https://dmoj.ca/submission/3339671)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-01-30T18:41:41+00:00
 
 # CCC '11 J2 - Who Has Seen The Wind
