@@ -1,7 +1,7 @@
 # Problem: CCC '07 J4 - Anagram Checker (ccc07j4)
 # Problem URL: https://dmoj.ca/problem/ccc07j4
 # Submission: 2961560 (https://dmoj.ca/submission/2961560)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2020-08-20T21:25:10+00:00
 
 def solve():
