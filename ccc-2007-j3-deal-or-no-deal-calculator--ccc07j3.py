@@ -1,7 +1,7 @@
 # Problem: CCC '07 J3 - Deal or No Deal Calculator (ccc07j3)
 # Problem URL: https://dmoj.ca/problem/ccc07j3
 # Submission: 2961315 (https://dmoj.ca/submission/2961315)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2020-08-20T20:02:15+00:00
 
 list1 = [100, 500,1000,5000,10000,25000,50000,100000,500000,1000000]
