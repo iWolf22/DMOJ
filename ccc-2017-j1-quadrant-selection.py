@@ -1,7 +1,7 @@
 # Problem: CCC '17 J1 - Quadrant Selection (ccc17j1)
 # Problem URL: https://dmoj.ca/problem/ccc17j1
 # Submission: 3319925 (https://dmoj.ca/submission/3319925)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-01-24T16:24:09+00:00
 
 #CCC '17 J1 - Quadrant Selection
