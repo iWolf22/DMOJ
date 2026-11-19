@@ -1,7 +1,7 @@
 # Problem: CCC '06 J1 - Canadian Calorie Counting (ccc06j1)
 # Problem URL: https://dmoj.ca/problem/ccc06j1
 # Submission: 2960009 (https://dmoj.ca/submission/2960009)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2020-08-20T03:09:17+00:00
 
 list1 = [461,431,420,0]
