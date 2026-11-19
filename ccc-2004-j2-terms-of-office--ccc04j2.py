@@ -1,7 +1,7 @@
 # Problem: CCC '04 J2 - Terms of Office (ccc04j2)
 # Problem URL: https://dmoj.ca/problem/ccc04j2
 # Submission: 2612843 (https://dmoj.ca/submission/2612843)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2020-08-05T16:46:00+00:00
 
 num1 = int(input())
