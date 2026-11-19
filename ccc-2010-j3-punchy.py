@@ -1,7 +1,7 @@
 # Problem: CCC '10 J3 - Punchy (ccc10j3)
 # Problem URL: https://dmoj.ca/problem/ccc10j3
 # Submission: 3130909 (https://dmoj.ca/submission/3130909)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2020-11-13T23:02:06+00:00
 
 #Solve 2010j3 using exec. (There will be a solution provided for this)
