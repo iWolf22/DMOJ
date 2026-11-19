@@ -1,7 +1,7 @@
 # Problem: CCC '12 J4 - Big Bang Secrets (ccc12j4)
 # Problem URL: https://dmoj.ca/problem/ccc12j4
 # Submission: 3427634 (https://dmoj.ca/submission/3427634)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-02-17T03:05:26+00:00
 
 # CCC '12 J4 - Big Bang Secrets
