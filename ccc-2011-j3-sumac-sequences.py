@@ -1,7 +1,7 @@
 # Problem: CCC '11 J3 - Sumac Sequences (ccc11j3)
 # Problem URL: https://dmoj.ca/problem/ccc11j3
 # Submission: 3341151 (https://dmoj.ca/submission/3341151)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-01-30T23:33:01+00:00
 
 #CCC '11 J3 - Sumac Sequences
