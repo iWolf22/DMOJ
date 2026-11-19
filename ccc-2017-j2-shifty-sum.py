@@ -1,7 +1,7 @@
 # Problem: CCC '17 J2 - Shifty Sum (ccc17j2)
 # Problem URL: https://dmoj.ca/problem/ccc17j2
 # Submission: 3319975 (https://dmoj.ca/submission/3319975)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-01-24T16:30:55+00:00
 
 #CCC '17 J2 - Shifty Sum
