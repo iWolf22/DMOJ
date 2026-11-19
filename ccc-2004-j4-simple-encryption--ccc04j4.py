@@ -1,7 +1,7 @@
 # Problem: CCC '04 J4 - Simple Encryption (ccc04j4)
 # Problem URL: https://dmoj.ca/problem/ccc04j4
 # Submission: 3690324 (https://dmoj.ca/submission/3690324)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-06-21T16:55:03+00:00
 
 #CCC '04 J4 - Simple Encryption
