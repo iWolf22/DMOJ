@@ -1,7 +1,7 @@
 # Problem: CCC '09 J2 - Old Fishin' Hole (ccc09j2)
 # Problem URL: https://dmoj.ca/problem/ccc09j2
 # Submission: 4448284 (https://dmoj.ca/submission/4448284)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2022-03-26T02:38:19+00:00
 
 # CCC '09 J2 - Old Fishin' Hole
