@@ -1,7 +1,7 @@
 # Problem: CCC '02 S2 - Fraction Action (ccc02s2)
 # Problem URL: https://dmoj.ca/problem/ccc02s2
 # Submission: 4568640 (https://dmoj.ca/submission/4568640)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2022-05-19T01:54:38+00:00
 
 # CCC '02 S2 - Fraction Action
