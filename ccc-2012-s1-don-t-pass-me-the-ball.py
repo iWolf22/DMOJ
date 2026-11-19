@@ -1,7 +1,7 @@
 # Problem: CCC '12 S1 - Don't pass me the ball! (ccc12s1)
 # Problem URL: https://dmoj.ca/problem/ccc12s1
 # Submission: 4576836 (https://dmoj.ca/submission/4576836)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2022-05-23T16:11:03+00:00
 
 # CCC '12 S1 - Don't pass me the ball!
