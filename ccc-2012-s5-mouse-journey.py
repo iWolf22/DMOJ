@@ -1,7 +1,7 @@
 # Problem: CCC '12 S5 - Mouse Journey (ccc12s5)
 # Problem URL: https://dmoj.ca/problem/ccc12s5
 # Submission: 4577229 (https://dmoj.ca/submission/4577229)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2022-05-23T18:52:52+00:00
 
 # CCC '12 S5 - Mouse Journey
