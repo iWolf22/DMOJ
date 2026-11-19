@@ -1,7 +1,7 @@
 // Problem: CCC '00 S2 - Babbling Brooks (ccc00s2)
 // Problem URL: https://dmoj.ca/problem/ccc00s2
 // Submission: 4791173 (https://dmoj.ca/submission/4791173)
-// Language: C++20
+// Language: C++20 (CPP20)
 // Submitted: 2022-08-22T22:09:35+00:00
 
 #include <iostream>
