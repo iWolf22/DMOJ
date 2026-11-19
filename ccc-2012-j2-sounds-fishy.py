@@ -1,7 +1,7 @@
 # Problem: CCC '12 J2 - Sounds fishy! (ccc12j2)
 # Problem URL: https://dmoj.ca/problem/ccc12j2
 # Submission: 4576602 (https://dmoj.ca/submission/4576602)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2022-05-23T14:04:32+00:00
 
 # CCC '12 J2 - Sounds fishy!
