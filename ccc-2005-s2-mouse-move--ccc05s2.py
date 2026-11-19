@@ -1,7 +1,7 @@
 # Problem: CCC '05 S2 - Mouse Move (ccc05s2)
 # Problem URL: https://dmoj.ca/problem/ccc05s2
 # Submission: 3542277 (https://dmoj.ca/submission/3542277)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-04-05T17:12:23+00:00
 
 # CCC '05 S2 - Mouse Move
