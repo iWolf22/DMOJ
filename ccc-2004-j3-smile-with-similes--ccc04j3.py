@@ -1,7 +1,7 @@
 # Problem: CCC '04 J3 - Smile with Similes (ccc04j3)
 # Problem URL: https://dmoj.ca/problem/ccc04j3
 # Submission: 2612868 (https://dmoj.ca/submission/2612868)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2020-08-05T16:55:00+00:00
 
 num1 = int(input())
