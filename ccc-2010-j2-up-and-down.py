@@ -1,7 +1,7 @@
 # Problem: CCC '10 J2 - Up and Down (ccc10j2)
 # Problem URL: https://dmoj.ca/problem/ccc10j2
 # Submission: 3165372 (https://dmoj.ca/submission/3165372)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2020-11-29T17:25:07+00:00
 
 a = int(input())
