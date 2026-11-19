@@ -1,7 +1,7 @@
 // Problem: CCC '17 J4 - Favourite Times (ccc17j4)
 // Problem URL: https://dmoj.ca/problem/ccc17j4
 // Submission: 4965047 (https://dmoj.ca/submission/4965047)
-// Language: C++14
+// Language: C++14 (CPP14)
 // Submitted: 2022-10-23T23:03:39+00:00
 
 #include <iostream>
