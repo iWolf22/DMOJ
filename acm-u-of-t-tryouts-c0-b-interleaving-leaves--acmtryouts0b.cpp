@@ -1,7 +1,7 @@
 // Problem: ACM U of T Tryouts C0 B - Interleaving Leaves (acmtryouts0b)
 // Problem URL: https://dmoj.ca/problem/acmtryouts0b
 // Submission: 3685682 (https://dmoj.ca/submission/3685682)
-// Language: C++20
+// Language: C++20 (CPP20)
 // Submitted: 2021-06-19T00:57:40+00:00
 
 #include <iostream>
