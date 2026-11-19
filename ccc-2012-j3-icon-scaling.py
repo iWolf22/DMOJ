@@ -1,7 +1,7 @@
 # Problem: CCC '12 J3 - Icon Scaling (ccc12j3)
 # Problem URL: https://dmoj.ca/problem/ccc12j3
 # Submission: 4576655 (https://dmoj.ca/submission/4576655)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2022-05-23T14:41:27+00:00
 
 # CCC '12 J3 - Icon Scaling
