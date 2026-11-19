@@ -1,7 +1,7 @@
 # Problem: CCC '16 J2 - Magic Squares (ccc16j2)
 # Problem URL: https://dmoj.ca/problem/ccc16j2
 # Submission: 3228348 (https://dmoj.ca/submission/3228348)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2020-12-21T17:26:51+00:00
 
 def find_magic(total_list,base_num):
