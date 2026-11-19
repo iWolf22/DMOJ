@@ -85,6 +85,8 @@ class SolutionTests(unittest.TestCase):
             self.assertEqual(list(repo.head.commit.stats.files), [name])
             with self.assertRaises(RuntimeError):
                 sync.save_solution(repo, {**self.problem, 'code': 'different'}, name, content, 'collision', False)
+            with self.assertRaises(RuntimeError):
+                sync.save_solution(repo, {**self.problem, 'code': 'ccc20j'}, name, content, 'prefix collision', False)
             self.assertTrue(save(name, content.replace('print(1)', 'print(2)'), dry=True))
             self.assertEqual(repo.head.commit.hexsha, head)
             new_name = sync.filename(self.problem, 'cpp')

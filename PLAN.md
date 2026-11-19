@@ -1,99 +1,62 @@
 # DMOJSync Plan
 
-Archive **iWolf22’s newest full AC solution per problem**, refetch everything each run, and automatically commit changed solutions. **Implemented in `src/DMOJSync.py`; full export validation follows the first run.**
+Export **iWolf22’s newest full AC solution per problem**, with one Git commit per changed solution. Implemented in `src/DMOJSync.py`.
 
-## API and scraping flow
+## Flow
 
-Load `src/.env` with `python-dotenv`; authenticate requests to `https://dmoj.ca` using `Authorization: Bearer <token>`. `src/.gitignore` excludes that environment file.
+1. Load the ignored `src/.env` token with `python-dotenv`; authenticate using `Authorization: Bearer <token>`.
+2. Fetch `/api/v2/user/iWolf22` and every page of `/api/v2/submissions?user=iWolf22` on every run.
+3. Check `/api/v2/submission/<id>` and select the newest completed AC with full test-case marks, across languages. Reconcile exports against the account’s solved-problem list.
+4. Fetch fresh metadata through `/api/v2/problems?code=...` and `/api/v2/languages`.
+5. Download every selected `/src/<id>/raw` through a visible, standard Chromium session controlled with Playwright/CDP. Reuse a dedicated profile outside Git; send the token only to `dmoj.ca`. Allow browser verification, with a two-minute timeout.
+6. Add metadata comments, diff the complete file, and atomically replace only changes. Commit each changed problem separately. Preserve unrelated/local edits; report incomplete exports. `--dry-run` previews diffs; `--push` uploads after success.
 
-1. **Discover:** `GET /api/v2/user/iWolf22` for solved problems; paginate `GET /api/v2/submissions?user=iWolf22` for the complete submission history.
-2. **Select:** use `GET /api/v2/submission/<id>` to verify completed judging and full test-case marks; select the newest full AC per problem.
-3. **Enrich:** `GET /api/v2/problem/<code>` for title, group, and problem points; `GET /api/v2/languages` for language metadata.
-4. **Download:** open authenticated `/src/<id>/raw` in a standard, visible Chromium session controlled through Playwright/CDP. Let the browser complete Cloudflare’s JavaScript check and reuse its dedicated profile between runs. Attach the token only to requests to `dmoj.ca`. JSON submission responses do not include source code.
-5. **Sync:** prepend the metadata comments below → diff the complete file → replace only changes → create one stats commit per changed problem.
+No cached submission or source skips: **every run refetches everything**. Reuse `httpx`, Playwright, `aiolimiter`, GitPython, `python-dotenv`, and `python-slugify`. Keep stdout logs timestamped with 🔎 ⬇️ ⏭️ ✅ ⏳ ❌ and a final coverage summary.
 
-Refetch all pages, metadata, and selected sources every run. Sources: [official API/authentication documentation](https://github.com/DMOJ/docs/blob/master/docs/site/api.md), [raw source route](https://github.com/DMOJ/online-judge/blob/master/dmoj/urls.py).
-
-## Endpoint test results — November 19, 2026
-
-Tested with the local token; endpoint probes were spaced at least 2.7 seconds apart. Token values and downloaded contents were not printed.
-
-| Endpoint tested | Result |
-| --- | --- |
-| `/api/v2/user/iWolf22` | 200; valid JSON |
-| `/api/v2/submissions?user=iWolf22` | 200; 1,000 submissions |
-| Same endpoint with `&page=2` | 200; remaining 73 submissions (1,073 total) |
-| `/api/v2/languages` | 200; 75 languages |
-| `/api/v2/problem/nccc7j1` | 200; valid JSON |
-| `/api/v2/submission/2092598` and `/2129277` | Both 200; valid JSON |
-| Raw source and HTML source pages via ordinary HTTP clients | 403; Cloudflare challenge |
-| `/src/2092598/raw` via standard Chromium | 200; 220 bytes of plain-text source; valid Python syntax |
-| `/src/2129277/raw` via standard Chromium | 200; 136 bytes of plain-text source |
-
-**Source access is verified.** A standard Chromium launch completed the JavaScript challenge; reopening the same isolated profile downloaded both sources immediately with HTTP 200. Plain `requests`, browser-compatible `curl_cffi`, and the default automated browser launch did not clear the challenge in these tests. No CAPTCHA service, proxy, or account password was used. The sync and Git behavior are implemented and covered by offline tests; the first full export is the remaining live check.
-
-The token/header was correct: DMOJ’s [authentication middleware](https://github.com/DMOJ/online-judge/blob/master/judge/middleware.py) and an [existing submission downloader](https://github.com/0foxes/submission-downloader/blob/master/submission_downloader.py) use the same Bearer header. The failures carried Cloudflare’s documented [`cf-mitigated: challenge` marker](https://developers.cloudflare.com/cloudflare-challenges/challenge-types/challenge-pages/detect-response/).
-
-## Repository and filenames
+## Layout and names
 
 ```text
 DMOJ/
 ├── README.md
 ├── PLAN.md
 ├── requirements.txt
+├── tests/test_sync.py
 ├── src/
-│   ├── .env                 # local token; ignored
-│   ├── .gitignore           # ignores /.env
+│   ├── .env          # ignored
+│   ├── .gitignore
 │   └── DMOJSync.py
-├── ccc-2020-j1-dog-treats.py
+├── ccc-2002-s1-the-students-council-breakfast.py
 └── <org>-<problem-title>.<extension>
 ```
 
-Use the contest/organizer label (e.g. `ccc`), followed by the title without repeating the organizer prefix. Lowercase hyphenated names; use `dmoj` if no organizer is identifiable. Keep the problem code in the header, not the filename; match existing files through their problem URL, including files using the old suffix. Stop on filename collisions instead of overwriting another problem. Extensions follow the submission language. All solutions live directly in the root.
-
-## Sync behavior
-
-1. **Small Python file:** focused functions; reuse `httpx` for JSON, Playwright for browser source downloads, `python-dotenv`, `aiolimiter`, GitPython, and `python-slugify`. No HTML parser needed. Command: `python src/DMOJSync.py`. Keep the dedicated browser profile outside the repository; never log or commit credentials.
-2. **Full refresh:** traverse every history page and refetch problem metadata and selected source every run. No cache-based skipping. Choose the newest completed AC with full test-case marks across languages; break date ties by submission ID.
-3. **Check coverage:** reconcile full solves with the authenticated account’s solved-problem list/count. Report inaccessible pages/sources and missing problem codes; mark incomplete runs clearly. Never delete files because a page became inaccessible.
-4. **Idempotent files:** diff content; identical files produce no writes or commits. Download and validate before atomically replacing changed files. Remove the previous managed filename on title/language changes and commit the replacement together. Preserve unrelated files and local edits.
-5. **Automatic commits:** one commit per changed problem, staging only its managed paths. Provide `--dry-run` with diffs and optional `--push`.
-6. **Stdout logging:** timestamps and 🔎 discovery, ⬇️ fetch, ⏭️ unchanged, ✅ commit, ⏳ retry, ❌ failure; finish with changed/unchanged/inaccessible counts.
-
-## Request pacing
-
-The [official documentation](https://github.com/DMOJ/docs/blob/master/docs/site/api.md#rate-limiting) states **90 requests/minute** and warns of CAPTCHA enforcement. Use **25% = 22.5/minute**, at least **2.667 seconds between requests**. One shared limiter covers API calls and browser requests to DMOJ, including retries and redirects; no concurrent bursts. Honor `Retry-After` and back off on temporary failures. Let the visible browser handle JavaScript checks; pause for user action if an interactive CAPTCHA appears. Never save challenge HTML as source.
-
-## Selected commit format
-
-```text
-Time: 0.042 s | Memory: 8.0 MB | Score: 100/100 | Points: 3 - DMOJSync
-
-Problem: CCC '20 J1 - Dog Treats (ccc20j1)
-Problem URL: https://dmoj.ca/problem/ccc20j1
-Submission: <ID and URL>
-Language: <language>
-Submitted: <original submission date>
-```
-
-Illustrative statistics: **Score** is earned/maximum test-case score; **Points** is the problem’s DMOJ point value. Use reported values and units, without invented percentiles. This follows your [LeetSync format](https://github.com/joshua-dierickse-alt/LeetCode/commit/c906b40360c0b9606880775fa54b22d62d9573d5).
+Use lowercase, hyphenated names without repeating the organizer prefix. Keep the problem code **in the header, not the filename**. Match files by their problem URL so title/language changes and old suffixed filenames become replacements. Stop on collisions instead of overwriting another problem.
 
 ## Solution header
-
-Every saved solution starts with this metadata, followed by **one blank line**, then the original code:
 
 ```python
 # Problem: CCC '20 J1 - Dog Treats (ccc20j1)
 # Problem URL: https://dmoj.ca/problem/ccc20j1
 # Submission: <ID and URL>
-# Language: <language>
+# Language: <language and runtime key>
 # Submitted: <original submission date>
 
 <original solution>
 ```
 
-Use `#` for Python and `//` for C++ and C# (two accepted C# submissions were found during the export). Keep a small extension-to-comment-prefix mapping for any additional supported languages; report unknown languages rather than guessing. Preserve required shebang/encoding declarations before the metadata if present. Build the header afresh from submission metadata each run, without duplication or fetch timestamps, then diff the header and code together.
+Use `#` for Python and `//` for C++ and C#; the account includes two accepted C# submissions. Preserve shebang/encoding declarations. Leave one blank line before the original code. Do not add fetch timestamps or duplicate headers.
 
-## Validation and README
+## Commit format
 
-Verify pagination, full-AC selection, coverage reporting, pacing, filename collisions/renames, and isolated commits. An identical second run must refetch everything and produce zero changes/commits. The README includes setup, the command, dry-run/push options, and browser requirements.
+```text
+Time: 0.042 s | Memory: 8.00 MiB | Score: 100/100 | Points: 3 - DMOJSync
+```
+
+The body contains the same five metadata fields as the file header. **Score** is earned/maximum test-case score; **Points** is the problem’s point value. Values above are illustrative.
+
+## Rate limit and verification
+
+DMOJ documents **90 requests/minute**. Target at most **25% = 22.5/minute**; the implementation spaces requests **2.7 seconds** apart (22.22/minute). Share one limiter between API and browser requests; respect server backoff and never save challenge HTML as code. [Official API, authentication, and rate-limit documentation](https://github.com/DMOJ/docs/blob/master/docs/site/api.md).
+
+API metadata and pagination passed live checks. Standard Chromium successfully downloaded submissions `2092598` and `2129277`; ordinary HTTP clients received Cloudflare challenges. The token format matches DMOJ’s [authentication middleware](https://github.com/DMOJ/online-judge/blob/master/judge/middleware.py).
+
+Eight offline tests cover full-AC selection, headers, short filenames, collisions, byte-preserving idempotence, replacements, and isolated Git commits. The full export completed on November 19, 2026: **176 solutions** (143 Python, 31 C++, 2 C#), **zero failures**, and **151/151 profile solves covered**. An audit of all 176 files verified unchanged contents produce no writes or extra commits; metadata, blank lines, short filenames, and token exclusion also passed.

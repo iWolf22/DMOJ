@@ -198,7 +198,7 @@ def save_solution(repo, problem, name, content, message, dry_run, known_paths=No
     target = root / name
     old = sorted(managed_solutions(root).get(problem['code'], []) if known_paths is None else known_paths)
     for path in set(old + ([target] if target.exists() else [])):
-        managed = f'Problem URL: {BASE}/problem/{problem["code"]}' in path.read_bytes().decode('utf-8')[:1000]
+        managed = path in old
         if not managed or repo.git.status('--porcelain', '--', path.name):
             raise RuntimeError(f'Preserving locally modified or unmanaged file: {path.name}')
     previous = target.read_bytes().decode('utf-8') if target.exists() else ''
