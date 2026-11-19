@@ -1,7 +1,7 @@
 # Problem: CCC '16 J1 - Tournament Selection (ccc16j1)
 # Problem URL: https://dmoj.ca/problem/ccc16j1
 # Submission: 3228316 (https://dmoj.ca/submission/3228316)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2020-12-21T17:11:47+00:00
 
 #CCC '16 J1 - Tournament Selection
