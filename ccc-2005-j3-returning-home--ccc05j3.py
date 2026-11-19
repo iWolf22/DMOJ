@@ -1,7 +1,7 @@
 # Problem: CCC '05 J3 - Returning Home (ccc05j3)
 # Problem URL: https://dmoj.ca/problem/ccc05j3
 # Submission: 3542177 (https://dmoj.ca/submission/3542177)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-04-05T16:31:01+00:00
 
 # CCC '05 J3 - Returning Home
