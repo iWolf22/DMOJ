@@ -1,7 +1,7 @@
 // Problem: Another Contest 8 Problem 2 - Unnecessary Trash Push (acc8p2)
 // Problem URL: https://dmoj.ca/problem/acc8p2
 // Submission: 3912535 (https://dmoj.ca/submission/3912535)
-// Language: C++20
+// Language: C++20 (CPP20)
 // Submitted: 2021-09-25T16:06:34+00:00
 
 #include <bits/stdc++.h>
