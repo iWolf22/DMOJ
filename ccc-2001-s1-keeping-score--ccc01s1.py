@@ -1,7 +1,7 @@
 # Problem: CCC '01 S1 - Keeping Score (ccc01s1)
 # Problem URL: https://dmoj.ca/problem/ccc01s1
 # Submission: 3547344 (https://dmoj.ca/submission/3547344)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-04-08T02:35:20+00:00
 
 #CCC '01 S1 - Keeping Score
