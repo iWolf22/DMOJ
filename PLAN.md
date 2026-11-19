@@ -92,7 +92,7 @@ Every saved solution starts with this metadata, followed by **one blank line**, 
 <original solution>
 ```
 
-Use `#` for Python and `//` for C++. Keep a small extension-to-comment-prefix mapping for any additional supported languages; report unknown languages rather than guessing. Preserve required shebang/encoding declarations before the metadata if present. Build the header afresh from submission metadata each run, without duplication or fetch timestamps, then diff the header and code together.
+Use `#` for Python and `//` for C++ and C# (two accepted C# submissions were found during the export). Keep a small extension-to-comment-prefix mapping for any additional supported languages; report unknown languages rather than guessing. Preserve required shebang/encoding declarations before the metadata if present. Build the header afresh from submission metadata each run, without duplication or fetch timestamps, then diff the header and code together.
 
 ## Validation and README
 

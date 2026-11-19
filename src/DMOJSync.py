@@ -124,7 +124,7 @@ def language_format(language):
         return 'py', '#'
     if '++' in name or key.startswith(('CPP', 'CLANGX')):
         return 'cpp', '//'
-    formats = {'C': ('c', '//'), 'Java': ('java', '//'), 'JavaScript': ('js', '//'),
+    formats = {'C': ('c', '//'), 'C#': ('cs', '//'), 'Java': ('java', '//'), 'JavaScript': ('js', '//'),
                'Rust': ('rs', '//'), 'Go': ('go', '//'), 'Ruby': ('rb', '#')}
     if name not in formats:
         raise ValueError(f'Unsupported language: {key} ({name})')
@@ -146,7 +146,7 @@ def metadata(problem, submission, language):
     return [f'Problem: {problem["name"]} ({problem["code"]})',
             f'Problem URL: {BASE}/problem/{problem["code"]}',
             f'Submission: {submission["id"]} ({BASE}/submission/{submission["id"]})',
-            f'Language: {language.get("short_name", language["key"])}',
+            f'Language: {language.get("short_name") or language["common_name"]} ({language["key"]})',
             f'Submitted: {submission["date"]}']
 
 

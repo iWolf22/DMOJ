@@ -25,7 +25,7 @@ class SolutionTests(unittest.TestCase):
         self.assertNotEqual(sync.filename(self.problem, 'py'), sync.filename({**self.problem, 'code': 'other'}, 'py'))
 
     def test_python_and_cpp_comments_leave_blank_line(self):
-        for language, name, prefix in [('PY3', 'Python', '#'), ('CPP17', 'C++', '//')]:
+        for language, name, prefix in [('PY3', 'Python', '#'), ('CPP17', 'C++', '//'), ('MONOCS', 'C#', '//')]:
             extension, actual = sync.language_format({'key': language, 'common_name': name})
             text = sync.solution_text('original\n', self.lines, actual)
             self.assertTrue(text.startswith(prefix + ' Problem:'))
@@ -38,6 +38,10 @@ class SolutionTests(unittest.TestCase):
         text = sync.solution_text(source, self.lines, '#')
         self.assertTrue(text.startswith('#!/usr/bin/python\n# coding: utf-8\n# Problem:'))
         self.assertEqual(text.count('Problem URL:'), 1)
+
+    def test_empty_language_label_falls_back_to_name_and_runtime_key(self):
+        lines = sync.metadata(self.problem, self.submission, {**self.language, 'short_name': ''})
+        self.assertIn('Language: Python (PY3)', lines)
 
     def test_commit_stats_distinguish_test_score_and_problem_points(self):
         message = sync.commit_message(self.submission, self.problem, self.lines)
