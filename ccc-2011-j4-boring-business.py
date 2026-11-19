@@ -1,7 +1,7 @@
 # Problem: CCC '11 J4 - Boring Business (ccc11j4)
 # Problem URL: https://dmoj.ca/problem/ccc11j4
 # Submission: 4592402 (https://dmoj.ca/submission/4592402)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2022-05-29T20:39:49+00:00
 
 # CCC '11 J4 - Boring Business
