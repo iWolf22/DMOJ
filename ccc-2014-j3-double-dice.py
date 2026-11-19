@@ -1,7 +1,7 @@
 # Problem: CCC '14 J3 - Double Dice (ccc14j3)
 # Problem URL: https://dmoj.ca/problem/ccc14j3
 # Submission: 3225215 (https://dmoj.ca/submission/3225215)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2020-12-20T18:29:02+00:00
 
 #CCC '14 J3 - Double Dice
