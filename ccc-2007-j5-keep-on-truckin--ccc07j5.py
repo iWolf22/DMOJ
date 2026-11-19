@@ -1,7 +1,7 @@
 # Problem: CCC '07 J5 - Keep on Truckin' (ccc07j5)
 # Problem URL: https://dmoj.ca/problem/ccc07j5
 # Submission: 4576180 (https://dmoj.ca/submission/4576180)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2022-05-23T03:27:53+00:00
 
 # CCC '07 J5 - Keep on Truckin'
