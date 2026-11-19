@@ -1,7 +1,7 @@
 # Problem: CCC '12 S3 - Absolutely Acidic (ccc12s3)
 # Problem URL: https://dmoj.ca/problem/ccc12s3
 # Submission: 4577078 (https://dmoj.ca/submission/4577078)
-# Language: PYPY3
+# Language: PYPY3 (PYPY3)
 # Submitted: 2022-05-23T17:51:34+00:00
 
 # CCC '12 S3 - Absolutely Acidic 2
