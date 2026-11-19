@@ -1,7 +1,7 @@
 // Problem: Next Prime (bf3)
 // Problem URL: https://dmoj.ca/problem/bf3
 // Submission: 4773416 (https://dmoj.ca/submission/4773416)
-// Language: C++20
+// Language: C++20 (CPP20)
 // Submitted: 2022-08-15T20:28:44+00:00
 
 #include <iostream>
