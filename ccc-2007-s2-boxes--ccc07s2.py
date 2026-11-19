@@ -1,7 +1,7 @@
 # Problem: CCC '07 S2 - Boxes (ccc07s2)
 # Problem URL: https://dmoj.ca/problem/ccc07s2
 # Submission: 3534667 (https://dmoj.ca/submission/3534667)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-04-03T02:06:45+00:00
 
 # CCC '07 S2 - Boxes
