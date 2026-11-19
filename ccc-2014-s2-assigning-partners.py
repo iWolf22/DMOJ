@@ -1,7 +1,7 @@
 # Problem: CCC '14 S2 - Assigning Partners (ccc14s2)
 # Problem URL: https://dmoj.ca/problem/ccc14s2
 # Submission: 3434173 (https://dmoj.ca/submission/3434173)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-02-19T02:41:26+00:00
 
 #CCC '14 S2 - Assigning Partners
