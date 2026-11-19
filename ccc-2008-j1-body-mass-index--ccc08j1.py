@@ -1,7 +1,7 @@
 # Problem: CCC '08 J1 - Body Mass Index (ccc08j1)
 # Problem URL: https://dmoj.ca/problem/ccc08j1
 # Submission: 3199740 (https://dmoj.ca/submission/3199740)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2020-12-12T16:33:04+00:00
 
 num1 = float(input())
