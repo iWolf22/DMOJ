@@ -1,7 +1,7 @@
 # Problem: CCC '12 S2 - Aromatic Numbers (ccc12s2)
 # Problem URL: https://dmoj.ca/problem/ccc12s2
 # Submission: 4576917 (https://dmoj.ca/submission/4576917)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2022-05-23T16:42:05+00:00
 
 # CCC '12 S2 - Aromatic Numbers
