@@ -1,7 +1,7 @@
 # Problem: CCC '01 J1 - Dressing Up (ccc01j1)
 # Problem URL: https://dmoj.ca/problem/ccc01j1
 # Submission: 3208077 (https://dmoj.ca/submission/3208077)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2020-12-16T00:48:00+00:00
 
 # CCC '01 J1 - Dressing Up
