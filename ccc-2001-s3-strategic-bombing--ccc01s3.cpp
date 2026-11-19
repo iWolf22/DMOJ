@@ -1,7 +1,7 @@
 // Problem: CCC '01 S3 - Strategic Bombing (ccc01s3)
 // Problem URL: https://dmoj.ca/problem/ccc01s3
 // Submission: 4797159 (https://dmoj.ca/submission/4797159)
-// Language: C++20
+// Language: C++20 (CPP20)
 // Submitted: 2022-08-25T18:02:35+00:00
 
 #include <iostream>
