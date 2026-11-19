@@ -1,7 +1,7 @@
 # Problem: CCC '15 S1 - Zero That Out (ccc15s1)
 # Problem URL: https://dmoj.ca/problem/ccc15s1
 # Submission: 3329575 (https://dmoj.ca/submission/3329575)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-01-27T03:05:36+00:00
 
 #CCC '15 S1 - Zero That Out
