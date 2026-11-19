@@ -1,7 +1,7 @@
 # Problem: CCC '14 J1 - Triangle Times (ccc14j1)
 # Problem URL: https://dmoj.ca/problem/ccc14j1
 # Submission: 3225134 (https://dmoj.ca/submission/3225134)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2020-12-20T18:11:43+00:00
 
 #CCC '14 J1 - Triangle Times
