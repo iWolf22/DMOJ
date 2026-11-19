@@ -1,7 +1,7 @@
 # Problem: Appleby Contest '20 P1 - Terrific Triangles (ac20p1)
 # Problem URL: https://dmoj.ca/problem/ac20p1
 # Submission: 3591817 (https://dmoj.ca/submission/3591817)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-04-27T02:47:53+00:00
 
 import math
