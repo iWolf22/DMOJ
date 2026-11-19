@@ -1,7 +1,7 @@
 # Problem: CCC '03 S1 - Snakes and Ladders (ccc03s1)
 # Problem URL: https://dmoj.ca/problem/ccc03s1
 # Submission: 3653004 (https://dmoj.ca/submission/3653004)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-05-30T15:49:10+00:00
 
 # CCC '03 S1 - Snakes and Ladders
