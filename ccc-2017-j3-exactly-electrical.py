@@ -1,7 +1,7 @@
 # Problem: CCC '17 J3 - Exactly Electrical (ccc17j3)
 # Problem URL: https://dmoj.ca/problem/ccc17j3
 # Submission: 3320087 (https://dmoj.ca/submission/3320087)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-01-24T16:51:20+00:00
 
 #CCC '17 J3 - Exactly Electrical
