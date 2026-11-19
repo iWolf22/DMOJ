@@ -1,7 +1,7 @@
 # Problem: CCC '11 J5 - Unfriend (ccc11j5)
 # Problem URL: https://dmoj.ca/problem/ccc11j5
 # Submission: 4590414 (https://dmoj.ca/submission/4590414)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2022-05-29T00:55:02+00:00
 
 # CCC '11 J5 - Unfriend
