@@ -1,7 +1,7 @@
 # Problem: CCC '03 J2 - Picture Perfect (ccc03j2)
 # Problem URL: https://dmoj.ca/problem/ccc03j2
 # Submission: 3642185 (https://dmoj.ca/submission/3642185)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-05-24T16:46:17+00:00
 
 import math
