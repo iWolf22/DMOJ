@@ -45,11 +45,11 @@ DMOJ/
 │   ├── .env                 # local token; ignored
 │   ├── .gitignore           # ignores /.env
 │   └── DMOJSync.py
-├── ccc-2020-j1-dog-treats--ccc20j1.py
-└── <org>-<problem-title>--<problem-code>.<extension>
+├── ccc-2020-j1-dog-treats.py
+└── <org>-<problem-title>.<extension>
 ```
 
-Use the contest/organizer label (e.g. `ccc`), followed by the title without repeating the organizer prefix. Lowercase hyphenated names; use `dmoj` if no organizer is identifiable. The unique problem code prevents title collisions and identifies files across renames. Extensions follow the submission language. All solutions live directly in the root.
+Use the contest/organizer label (e.g. `ccc`), followed by the title without repeating the organizer prefix. Lowercase hyphenated names; use `dmoj` if no organizer is identifiable. Keep the problem code in the header, not the filename; match existing files through their problem URL, including files using the old suffix. Stop on filename collisions instead of overwriting another problem. Extensions follow the submission language. All solutions live directly in the root.
 
 ## Sync behavior
 

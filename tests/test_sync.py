@@ -20,9 +20,8 @@ class SolutionTests(unittest.TestCase):
         self.language = {'key': 'PY3', 'common_name': 'Python', 'short_name': 'Python 3'}
         self.lines = sync.metadata(self.problem, self.submission, self.language)
 
-    def test_filename_includes_organizer_year_and_unique_code(self):
-        self.assertEqual(sync.filename(self.problem, 'py'), 'ccc-2020-j1-dog-treats--ccc20j1.py')
-        self.assertNotEqual(sync.filename(self.problem, 'py'), sync.filename({**self.problem, 'code': 'other'}, 'py'))
+    def test_filename_includes_organizer_and_year_without_code_suffix(self):
+        self.assertEqual(sync.filename(self.problem, 'py'), 'ccc-2020-j1-dog-treats.py')
 
     def test_python_and_cpp_comments_leave_blank_line(self):
         for language, name, prefix in [('PY3', 'Python', '#'), ('CPP17', 'C++', '//'), ('MONOCS', 'C#', '//')]:
@@ -84,6 +83,8 @@ class SolutionTests(unittest.TestCase):
             self.assertEqual((root / name).stat().st_mtime_ns, mtime)
             self.assertEqual((root / name).read_bytes(), content.encode())
             self.assertEqual(list(repo.head.commit.stats.files), [name])
+            with self.assertRaises(RuntimeError):
+                sync.save_solution(repo, {**self.problem, 'code': 'different'}, name, content, 'collision', False)
             self.assertTrue(save(name, content.replace('print(1)', 'print(2)'), dry=True))
             self.assertEqual(repo.head.commit.hexsha, head)
             new_name = sync.filename(self.problem, 'cpp')

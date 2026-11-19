@@ -139,7 +139,7 @@ def filename(problem, extension):
     if organizer in ('uncategorized', ''):
         organizer = 'dmoj'
     stem = title if title.startswith(organizer + '-') else f'{organizer}-{title}'
-    return f'{stem}--{problem["code"]}.{extension}'
+    return f'{stem}.{extension}'
 
 
 def metadata(problem, submission, language):
@@ -182,10 +182,21 @@ async def latest_full_ac(client, candidates, code):
     return None
 
 
-def save_solution(repo, problem, name, content, message, dry_run):
+def managed_solutions(root):
+    solutions = {}
+    for path in root.iterdir():
+        if path.is_file() and path.suffix in {'.py', '.cpp', '.cs', '.c', '.java', '.js', '.rs', '.go', '.rb'}:
+            header = path.read_bytes()[:1000].decode('utf-8', errors='replace')
+            match = re.search(r'^(?:#|//) Problem URL: https://dmoj\.ca/problem/([\w]+)\r?$', header, re.MULTILINE)
+            if match:
+                solutions.setdefault(match[1], []).append(path)
+    return solutions
+
+
+def save_solution(repo, problem, name, content, message, dry_run, known_paths=None):
     root = Path(repo.working_tree_dir)
     target = root / name
-    old = sorted(root.glob(f'*--{problem["code"]}.*'))
+    old = sorted(managed_solutions(root).get(problem['code'], []) if known_paths is None else known_paths)
     for path in set(old + ([target] if target.exists() else [])):
         managed = f'Problem URL: {BASE}/problem/{problem["code"]}' in path.read_bytes().decode('utf-8')[:1000]
         if not managed or repo.git.status('--porcelain', '--', path.name):
@@ -237,6 +248,7 @@ async def sync(args):
                 problems[problem['code']] = problem
         LOG.info('🔎 %s submissions; %s solved problems; %s AC problem candidates', len(submissions), user['problem_count'], len(codes))
         candidates = sorted(submissions, key=lambda s: (s['date'], s['id']), reverse=True)
+        managed = managed_solutions(ROOT)
         async with client.browser(args.user) as page:
             for code in codes:
                 try:
@@ -252,7 +264,7 @@ async def sync(args):
                     lines = metadata(problem, submission, language)
                     content = solution_text(source, lines, prefix)
                     changed_file = save_solution(repo, problem, filename(problem, extension), content,
-                                                 commit_message(submission, problem, lines), args.dry_run)
+                                                 commit_message(submission, problem, lines), args.dry_run, managed.get(code, []))
                     changed += changed_file
                     unchanged += not changed_file
                     exported.add(code)
