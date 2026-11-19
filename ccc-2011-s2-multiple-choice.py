@@ -1,7 +1,7 @@
 # Problem: CCC '11 S2 - Multiple Choice (ccc11s2)
 # Problem URL: https://dmoj.ca/problem/ccc11s2
 # Submission: 4191092 (https://dmoj.ca/submission/4191092)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2022-01-09T03:37:33+00:00
 
 # CCC '11 S2 - Multiple Choice
