@@ -1,7 +1,7 @@
 # Problem: Sorting (a4b1)
 # Problem URL: https://dmoj.ca/problem/a4b1
 # Submission: 3556091 (https://dmoj.ca/submission/3556091)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-04-11T22:10:26+00:00
 
 num = int(input())
