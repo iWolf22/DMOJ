@@ -1,7 +1,7 @@
 # Problem: CCC '00 S4 - Golf (ccc00s4)
 # Problem URL: https://dmoj.ca/problem/ccc00s4
 # Submission: 4366065 (https://dmoj.ca/submission/4366065)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2022-02-21T04:11:45+00:00
 
 # CCC '00 S4 - Golf
