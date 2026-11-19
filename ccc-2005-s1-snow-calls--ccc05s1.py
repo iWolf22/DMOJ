@@ -1,7 +1,7 @@
 # Problem: CCC '05 S1 - Snow Calls (ccc05s1)
 # Problem URL: https://dmoj.ca/problem/ccc05s1
 # Submission: 3522192 (https://dmoj.ca/submission/3522192)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2021-04-01T01:40:21+00:00
 
 string_list = []
