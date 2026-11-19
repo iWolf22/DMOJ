@@ -1,7 +1,7 @@
 # Problem: CCC '11 S1 - English or French? (ccc11s1)
 # Problem URL: https://dmoj.ca/problem/ccc11s1
 # Submission: 4189558 (https://dmoj.ca/submission/4189558)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2022-01-08T17:27:55+00:00
 
 # CCC '11 S1 - English or French
