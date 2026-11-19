@@ -1,7 +1,7 @@
 # Problem: CCC '07 J2 - I Speak TXTMSG (ccc07j2)
 # Problem URL: https://dmoj.ca/problem/ccc07j2
 # Submission: 2961234 (https://dmoj.ca/submission/2961234)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2020-08-20T19:35:16+00:00
 
 list1 = {"CU":"see you",":-)":"I'm happy",":-(":"I'm unhappy",";-)":"wink",":-P":"stick out my tongue","(~.~)":"sleepy","TA":"totally awesome","CCC":"Canadian Computing Competition","CUZ":"because","TY":"thank-you","YW":"you're welcome" ,"TTYL" : "talk to you later"}
