@@ -1,7 +1,7 @@
 # Problem: CCC '13 S1 - From 1987 to 2013 (ccc13s1)
 # Problem URL: https://dmoj.ca/problem/ccc13s1
 # Submission: 3223325 (https://dmoj.ca/submission/3223325)
-# Language: 
+# Language: Python (PY3)
 # Submitted: 2020-12-20T01:13:11+00:00
 
 #CCC '13 S1 - From 1987 to 2013
